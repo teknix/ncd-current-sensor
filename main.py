@@ -31,4 +31,4 @@ print "received data:", pairs
 
 #
 for k,v in enumerate(pairs):
-    print 'key: ' + str(k) + ' val: ' + str(int(v, 16))
+    print 'key: ' + str(k - 1) + ' val: ' + str(int(v, 16))
