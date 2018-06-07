@@ -8,6 +8,9 @@ TCP_PORT = 2101
 # Set Buffer Size
 BUFFER_SIZE = 1024
 
+#Setup Channel Names
+channels = list("infeed", "soaker", "dryer-main", "dryer-out", "grinder", "classifier")
+
 # Set Command to be sent to Current Monitor
 # In this case query all 6 channels | https://ncd.io/communicating-to-current-monitoring-controllers/
 MESSAGE = 'aa0ebc320a54926a010106000004551374'.decode('hex')
@@ -44,7 +47,7 @@ while (count <= 6):
     mid = most + 1
     low = mid + 1
 
-    channel['Channel' + str(count)] = str(float((int(pairs[most],16)*65536) + (int(pairs[mid],16) * 265) + int(pairs[low],16)) / 1000)
+    channel[channels[int(count) - 1]] = str(float((int(pairs[most],16)*65536) + (int(pairs[mid],16) * 265) + int(pairs[low],16)) / 1000)
     count = count + 1
     most = most + 3
 
