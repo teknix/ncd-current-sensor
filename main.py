@@ -1,5 +1,8 @@
-import socket
-import re
+#!/usr/bin/python
+from client_mqtt import ClientMQTT
+from threading import Thread
+import sys,time,re,datetime,json,socket
+
 
 # Set NCD Current Monitor IP address 
 TCP_IP = '192.168.1.102'
@@ -30,15 +33,9 @@ data = data.encode('hex')
 #Split into Byte Pairs
 pairs = re.findall('..?', data)
 
-print "received data:", pairs
+# print "received data:", pairs
 
-#
-# for k,v in enumerate(pairs):
-#     print 'key: ' + str(k + 1) + ' val: ' + str(int(v, 16))
-
-# i = 6
-# for pet in pets :
-#   print(pet)
+# Setup and Loop for all 6 Channels
 count = 1
 channel = {}
 most = 2
@@ -46,11 +43,9 @@ while (count <= 6):
     
     mid = most + 1
     low = mid + 1
-
+    # Calc channel amp value 3 bytes per channel
     channel[channels[int(count) - 1]] = str(float((int(pairs[most],16)*65536) + (int(pairs[mid],16) * 265) + int(pairs[low],16)) / 1000)
     count = count + 1
     most = most + 3
 
-
-# channel[1] = float((int(pairs[2],16)*65536) + (int(pairs[3],16) * 265) + int(pairs[4],16)) / 1000
 print channel
