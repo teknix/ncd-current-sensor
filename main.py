@@ -39,7 +39,7 @@ print "received data:", pairs
 count = 1
 channel = list()
 most = 2
-while (count < 6):
+while (count <= 6):
     
     mid = most + 1
     low = mid + 1
