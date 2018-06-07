@@ -10,6 +10,8 @@ TCP_IP = '192.168.1.102'
 TCP_PORT = 2101
 # Set Buffer Size
 BUFFER_SIZE = 1024
+#Number of Current Monitor Channels
+chanNum = 6
 
 #MQTT Topic
 mqtt_topic = 'amps'
@@ -51,7 +53,7 @@ def calcAmps(dataPairs):
     count = 1
     channel = {}
     most = 2
-    while (count <= 6):
+    while (count <= chanNum):
         
         mid = most + 1
         low = mid + 1
