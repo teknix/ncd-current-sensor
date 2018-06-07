@@ -37,7 +37,7 @@ print "received data:", pairs
 # for pet in pets :
 #   print(pet)
 count = 1
-channel = []
+channel = list()
 while (count < 6):
     most = 2
     mid = most + 1
