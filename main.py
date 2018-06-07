@@ -37,14 +37,14 @@ print "received data:", pairs
 # for pet in pets :
 #   print(pet)
 count = 1
-channel = list()
+channel = {}
 most = 2
 while (count <= 6):
     
     mid = most + 1
     low = mid + 1
 
-    print 'Channel ' + str(count) + ' ' + str(float((int(pairs[most],16)*65536) + (int(pairs[mid],16) * 265) + int(pairs[low],16)) / 1000)
+    channel['Channel' + str(count)] = str(float((int(pairs[most],16)*65536) + (int(pairs[mid],16) * 265) + int(pairs[low],16)) / 1000)
     count = count + 1
     most = most + 3
 
