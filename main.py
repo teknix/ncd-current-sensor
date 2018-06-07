@@ -17,3 +17,4 @@ data = data.encode('hex')
 pairs = re.findall('..?', data)
 
 print "received data:", pairs
+print pairs[0]
