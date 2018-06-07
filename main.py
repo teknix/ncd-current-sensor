@@ -9,7 +9,7 @@ TCP_PORT = 2101
 BUFFER_SIZE = 1024
 
 #Setup Channel Names
-channels = list("infeed", "soaker", "dryer-main", "dryer-out", "grinder", "classifier")
+channels = ["infeed", "soaker", "dryer-main", "dryer-out", "grinder", "classifier"]
 
 # Set Command to be sent to Current Monitor
 # In this case query all 6 channels | https://ncd.io/communicating-to-current-monitoring-controllers/
