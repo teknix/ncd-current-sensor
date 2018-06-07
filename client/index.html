@@ -37,7 +37,8 @@
          console.log('reloading');
          location.reload();
      }
-	 document.getElementById("messages").innerHTML = '<h1 style=color:'+data.color+'>'+data.hourly+' lbs/hr</h1><h3>Current Weight: '+data.weight+'</h3><h4>Current Material: '+data.type+'</h4><h4>'+data.time+'</h4><br/>';
+     console.log(data);
+	 document.getElementById("messages").innerHTML = '<h1 style=color:'+data.color+'>'+data.grinder+'</h1><h3>Current Weight: '+'</h3><h4>Current Material: '+data.type+'</h4><h4>'+data.time+'</h4><br/>';
 	 
      //$('#messages').prepend('<h1>'+data.hourly+' lbs/hr</h1><h2>'+data.time+'</h2><br/>');
  };

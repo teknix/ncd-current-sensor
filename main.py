@@ -25,7 +25,7 @@ sleep_time = 2 # 2 seconds
 
 
 #Setup Amp Channel Names
-channels = ["infeed", "soaker", "dryer-main", "dryer-out", "grinder", "classifier"]
+channels = ["infeed", "soaker", "dryerMain", "dryerOut", "grinder", "classifier"]
 
 # Read current and return bytes
 def readCurrent():
