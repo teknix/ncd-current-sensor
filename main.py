@@ -44,7 +44,7 @@ while (count < 6):
     low = mid + 1
 
     print 'The count is:', count
-    channel[count] = float((int(pairs[most],16)*65536) + (int(pairs[mid],16) * 265) + int(pairs[low],16)) / 1000
+    channel[] = float((int(pairs[most],16)*65536) + (int(pairs[mid],16) * 265) + int(pairs[low],16)) / 1000
     count = count + 1
     most = most + 3
 
