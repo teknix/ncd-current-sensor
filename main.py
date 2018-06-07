@@ -12,7 +12,7 @@ TCP_PORT = 2101
 BUFFER_SIZE = 1024
 
 #MQTT Topic
-mqtt_topic = 'current'
+mqtt_topic = 'amps'
 #MQTT Server IP or HOSTNAME
 mqtt_server = '192.168.1.10'
 #MQTT Port Number, usally 1883
