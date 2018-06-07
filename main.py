@@ -37,4 +37,4 @@ print "received data:", pairs
 # for pet in pets :
 #   print(pet)
 channel1 = ((pairs[2]*65536) + (pairs[3] * 265) + pairs[4])
-print ((pairs[2]*65536) + (pairs[3] * 265) + pairs[4])
+print channel1
