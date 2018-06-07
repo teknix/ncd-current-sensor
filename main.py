@@ -30,5 +30,11 @@ pairs = re.findall('..?', data)
 print "received data:", pairs
 
 #
-for k,v in enumerate(pairs):
-    print 'key: ' + str(k + 1) + ' val: ' + str(int(v, 16))
+# for k,v in enumerate(pairs):
+#     print 'key: ' + str(k + 1) + ' val: ' + str(int(v, 16))
+
+# i = 6
+# for pet in pets :
+#   print(pet)
+channel1 = ((pairs[2]*65536) + (pairs[3] * 265) + pairs[4])
+print ((pairs[2]*65536) + (pairs[3] * 265) + pairs[4])
