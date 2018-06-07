@@ -36,5 +36,17 @@ print "received data:", pairs
 # i = 6
 # for pet in pets :
 #   print(pet)
-channel1 = float((int(pairs[2],16)*65536) + (int(pairs[3],16) * 265) + int(pairs[4],16)) / 1000
-print channel1
+count = 1
+while (count < 6):
+    most = 2
+    mid = most + 1
+    low = mid + 1
+
+    print 'The count is:', count
+    channel[count] = float((int(pairs[most],16)*65536) + (int(pairs[mid],16) * 265) + int(pairs[low],16)) / 1000
+    count = count + 1
+    most = most + 3
+
+
+# channel[1] = float((int(pairs[2],16)*65536) + (int(pairs[3],16) * 265) + int(pairs[4],16)) / 1000
+print channel
