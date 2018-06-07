@@ -11,41 +11,113 @@ TCP_PORT = 2101
 # Set Buffer Size
 BUFFER_SIZE = 1024
 
-#Setup Channel Names
+#MQTT Topic
+mqtt_topic = 'current'
+#MQTT Server IP or HOSTNAME
+mqtt_server = '192.168.1.10'
+#MQTT Port Number, usally 1883
+mqtt_port = 1883
+#How long of a sample window (in seconds)
+sleep_time = 2 # 2 seconds
+
+
+
+#Setup Amp Channel Names
 channels = ["infeed", "soaker", "dryer-main", "dryer-out", "grinder", "classifier"]
 
-# Set Command to be sent to Current Monitor
-# In this case query all 6 channels | https://ncd.io/communicating-to-current-monitoring-controllers/
-MESSAGE = 'aa0ebc320a54926a010106000004551374'.decode('hex')
-#MESSAGE = 'AA03FE7C0128'.decode('hex')
+# Read current and return bytes
+def readCurrent():
+    # Set Command to be sent to Current Monitor
+    # In this case query all 6 channels | https://ncd.io/communicating-to-current-monitoring-controllers/
+    MESSAGE = 'aa0ebc320a54926a010106000004551374'.decode('hex')
+    #MESSAGE = 'AA03FE7C0128'.decode('hex')
 
-#Create Socket
-s = socket.socket()
-s.connect((TCP_IP, TCP_PORT))
-# Send Message to Current Monitor
-s.send(MESSAGE)
-# Collect response data
-data = s.recv(BUFFER_SIZE)
-s.close()
+    #Create Socket
+    s = socket.socket()
+    s.connect((TCP_IP, TCP_PORT))
+    # Send Message to Current Monitor
+    s.send(MESSAGE)
+    # Collect response data
+    data = s.recv(BUFFER_SIZE)
+    s.close()
+    # Convert response to hex
+    data = data.encode('hex')
+    #Split into Byte Pairs
+    pairs = re.findall('..?', data)
+    return pairs
 
-# Convert response to hex
-data = data.encode('hex')
-#Split into Byte Pairs
-pairs = re.findall('..?', data)
 
-# print "received data:", pairs
+def calcAmps(dataPairs):
+    count = 1
+    channel = {}
+    most = 2
+    while (count <= 6):
+        
+        mid = most + 1
+        low = mid + 1
+        # Calc channel amp value 3 bytes per channel
+        channel[channels[int(count) - 1]] = str(float((int(pairs[most],16)*65536) + (int(pairs[mid],16) * 265) + int(pairs[low],16)) / 1000)
+        count = count + 1
+        most = most + 3
 
-# Setup and Loop for all 6 Channels
-count = 1
-channel = {}
-most = 2
-while (count <= 6):
-    
-    mid = most + 1
-    low = mid + 1
-    # Calc channel amp value 3 bytes per channel
-    channel[channels[int(count) - 1]] = str(float((int(pairs[most],16)*65536) + (int(pairs[mid],16) * 265) + int(pairs[low],16)) / 1000)
-    count = count + 1
-    most = most + 3
+    return channel
 
-print channel
+def write_mqtt(topic, payload):
+    mqtt_client = ClientMQTT(ip_address=mqtt_server, port=mqtt_port)
+    mqtt_client.publish(topic, payload)
+
+
+def start_server_mqtt():
+    print('Connecting MQTT Client on port ' + mqtt_port)
+    mqtt_client = ClientMQTT(ip_address=mqtt_server, port=mqtt_port)
+    mqtt_client.simulate()
+
+def start_server_monitor():
+
+    while True:
+
+        try:
+            #read Current Data
+            data = readCurrent()
+            channelData = calcAmps(data)
+            jsonData = json.dumps(channelData)
+
+            # print data
+            write_mqtt(mqtt_topic, jsonData)
+            time.sleep(sleep_time)
+
+        except ValueError:
+            print('ERROR|Value')
+
+    return
+
+
+def main():
+    try:
+        st = Thread(target=start_server_monitor, args=())
+        st.start()
+
+    except (KeyboardInterrupt):
+        print "Interrupt received"
+        cleanup()
+        raise SystemExit
+
+
+    # Used for just throwing data at the MQTT server from the IOx application
+    # mt = Thread(target=start_server_mqtt, args=())
+    # mt.start()
+
+
+if __name__ == '__main__':
+    main()
+
+
+
+
+
+###############################################################
+
+# Setup variables necessary
+
+
+
