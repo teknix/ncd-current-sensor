@@ -38,8 +38,9 @@ print "received data:", pairs
 #   print(pet)
 count = 1
 channel = list()
+most = 2
 while (count < 6):
-    most = 2
+    
     mid = most + 1
     low = mid + 1
 
