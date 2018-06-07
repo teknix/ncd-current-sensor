@@ -1,4 +1,5 @@
 import socket
+import re
 
 
 TCP_IP = '192.168.1.102'
@@ -12,5 +13,7 @@ s.connect((TCP_IP, TCP_PORT))
 s.send(MESSAGE)
 data = s.recv(BUFFER_SIZE)
 s.close()
+data = data.encode('hex')
+pairs = re.findall('..?', data)
 
-print "received data:", data.encode('hex')
+print "received data:", pairs
