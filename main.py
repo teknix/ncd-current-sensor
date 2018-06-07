@@ -36,5 +36,5 @@ print "received data:", pairs
 # i = 6
 # for pet in pets :
 #   print(pet)
-channel1 = ((int(pairs[2],16)*65536) + (int(pairs[3],16) * 265) + int(pairs[4],16)) / 1000
+channel1 = float((int(pairs[2],16)*65536) + (int(pairs[3],16) * 265) + int(pairs[4],16)) / 1000
 print channel1
