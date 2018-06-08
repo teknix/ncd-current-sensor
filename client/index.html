@@ -32,13 +32,19 @@
  //Gets called whenever you receive a message for your subscriptions
  client.onMessageArrived = function (message) {
      //Do something with the push message you received
-	 data = JSON.parse(message.payloadString);
+     data = JSON.parse(message.payloadString);
+     if (data.hourly) {
+        document.getElementById("scale").innerHTML = '<h1 style=color:'+data.color+'>'+data.hourly+' lbs/hr</h1><h3>Current Weight: '+data.weight+'</h3><h4>Current Material: '+data.type+'</h4><h4>'+data.time+'</h4><br/>';
+     }
+     if (data.grinder) {
+        document.getElementById("amps").innerHTML = '<h3 style=color:'+data.color+'>Infeed: '+data.infeed+'</h3><h3>Soaker: '+data.soaker+'</h3><h3>Dyer Main: '+data.dryerMain+'</h3><h4>Dryer Out: '+data.dryerOut+'</h4><h4>Grinder: '+data.grinder+'</h4><h4>Classifier: '+data.classifier+'</h4><br/>';
+     }
      if (data.reload) { 
          console.log('reloading');
          location.reload();
      }
-     console.log(data);
-	 document.getElementById("messages").innerHTML = '<h1 style=color:'+data.color+'>'+data.grinder+'</h1><h3>Current Weight: '+'</h3><h4>Current Material: '+data.type+'</h4><h4>'+data.time+'</h4><br/>';
+     
+	 
 	 
      //$('#messages').prepend('<h1>'+data.hourly+' lbs/hr</h1><h2>'+data.time+'</h2><br/>');
  };
@@ -50,6 +56,7 @@
      onSuccess: function () {
          console.log("Connected");
          client.subscribe('amps/#', {qos: 2}); 
+         client.subscribe('scale/#', {qos: 2});
 		 console.log('Subscribed');
      },
      //Gets Called if the connection could not be established
@@ -82,7 +89,8 @@
 <button onclick="client.subscribe('amps/#', {qos: 2}); alert('Subscribed');">2. Subscribe</button>
 <button onclick="publish('Hello Foo !','testtopic/bar',2);">3. Publish</button >
 <button onclick="client.disconnect();">(4. Disconnect)</button-->
-<div id="messages"><h3>Please wait while I load scale data for you...</h3></div>
+<div id="scale"><h3>Please wait while I load scale data for you...</h3></div>
+<div id="amps"><h3>Please wait while I load Current AMP data for you...</h3></div>
   
 <script>
 $( document ).ready(function() {
