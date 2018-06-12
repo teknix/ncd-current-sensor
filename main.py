@@ -82,6 +82,7 @@ def start_server_monitor():
             #read Current Data
             data = readCurrent()
             channelData = calcAmps(data)
+            channelData['time'] =  str(datetime.datetime.now())
             jsonData = json.dumps(channelData)
 
             # publish current data
