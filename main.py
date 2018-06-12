@@ -84,7 +84,7 @@ def start_server_monitor():
             channelData = calcAmps(data)
             jsonData = json.dumps(channelData)
 
-            # print data
+            # publish current data
             write_mqtt(mqtt_topic, jsonData)
             time.sleep(sleep_time)
 

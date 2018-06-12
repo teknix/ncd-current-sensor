@@ -33,7 +33,8 @@
  client.onMessageArrived = function (message) {
      //Do something with the push message you received
      data = JSON.parse(message.payloadString);
-     if (data.hourly) {
+     console.log(data);
+     if ('time' in data ) {
         document.getElementById("scale").innerHTML = '<h1 style=color:'+data.color+'>'+data.hourly+' lbs/hr</h1><h3>Current Weight: '+data.weight+'</h3><h4>Current Material: '+data.type+'</h4><h4>'+data.time+'</h4><br/>';
      }
      if (data.grinder) {
@@ -89,8 +90,8 @@
 <button onclick="client.subscribe('amps/#', {qos: 2}); alert('Subscribed');">2. Subscribe</button>
 <button onclick="publish('Hello Foo !','testtopic/bar',2);">3. Publish</button >
 <button onclick="client.disconnect();">(4. Disconnect)</button-->
-<div id="scale"><h3>Please wait while I load scale data for you...</h3></div>
-<div id="amps"><h3>Please wait while I load Current AMP data for you...</h3></div>
+<div id="scale" style="float: left; width: 50%"><h3>Please wait while I load scale data for you...</h3></div>
+<div id="amps" style="float: right; width: 50%"><h3>Please wait while I load Current AMP data for you...</h3></div>
   
 <script>
 $( document ).ready(function() {
