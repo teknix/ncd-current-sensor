@@ -36,6 +36,7 @@ def readCurrent():
 
     #Create Socket
     s = socket.socket()
+    s.settimeout(2)
     s.connect((TCP_IP, TCP_PORT))
     # Send Message to Current Monitor
     s.send(MESSAGE)
