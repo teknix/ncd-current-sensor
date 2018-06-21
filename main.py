@@ -103,7 +103,7 @@ def start_server_monitor():
             mongo = MongoClient(MONGO_IP, MONGO_PORT)
             mongoDB = mongo['washline']
             ampdata  = mongoDB.amps
-            ampdata_id = ampdata.insert_one(ampData).inserted_id
+            ampdata_id = ampdata.insert_one(channelData).inserted_id
 
 
             time.sleep(sleep_time)
