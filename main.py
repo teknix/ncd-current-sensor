@@ -2,9 +2,9 @@
 from client_mqtt import ClientMQTT
 from threading import Thread
 import sys,time,re,datetime,json,socket
+from pymongo import MongoClient
 
-
-# Set NCD Current Monitor IP address 
+# Set NCD Current Monitor IP address
 TCP_IP = '192.168.1.102'
 # Set Listening Port on Remote Current Monitor
 TCP_PORT = 2101
@@ -21,6 +21,11 @@ mqtt_server = '192.168.1.10'
 mqtt_port = 1883
 #How long of a sample window (in seconds)
 sleep_time = 2 # 2 seconds
+
+#Mongo Server
+MONGO_IP = '192.168.1.9'
+MONGO_PORT = 27017
+
 
 
 
@@ -55,7 +60,7 @@ def calcAmps(dataPairs):
     channel = {}
     most = 2
     while (count <= chanNum):
-        
+
         mid = most + 1
         low = mid + 1
         # Calc channel amp value 3 bytes per channel
@@ -84,10 +89,18 @@ def start_server_monitor():
             data = readCurrent()
             channelData = calcAmps(data)
             channelData['time'] = str(datetime.datetime.now())
-            jsonData = json.dumps(channelData)
+            ampData = json.dumps(channelData)
 
             # publish current data
-            write_mqtt(mqtt_topic, jsonData)
+            write_mqtt(mqtt_topic, ampData)
+
+            #Save data to MONGODB
+            mongo = MongoClient(MONGO_IP, MONGO_PORT)
+            mongoDB = mongo['washline']
+            ampdata  = mongoDB.amps
+            ampdata_id = ampdata.insert_one(ampData).inserted_id
+
+
             time.sleep(sleep_time)
 
         except ValueError:
