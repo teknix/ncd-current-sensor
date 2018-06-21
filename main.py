@@ -41,12 +41,17 @@ def readCurrent():
 
     #Create Socket
     s = socket.socket()
-    s.settimeout(2)
+    s.settimeout(6)
     s.connect((TCP_IP, TCP_PORT))
     # Send Message to Current Monitor
     s.send(MESSAGE)
     # Collect response data
-    data = s.recv(BUFFER_SIZE)
+    try:
+        data = s.recv(BUFFER_SIZE)
+        while len(data) < 1:
+            data = s.recv(BUFFER_SIZE)
+    except socket.timeout as e:
+        time.sleep(sleep_time)
     s.close()
     # Convert response to hex
     data = data.encode('hex')
