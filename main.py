@@ -26,35 +26,51 @@ sleep_time = 2 # 2 seconds
 MONGO_IP = '192.168.1.9'
 MONGO_PORT = 27017
 
-
-
-
 #Setup Amp Channel Names
 channels = ["infeed", "soaker", "dryerMain", "dryerOut", "grinder", "classifier"]
+
+def send_command(req, encoding):
+    """Send either Decimal or Hex command to NCD Current Monitor.
+
+    Parameters
+    ----------
+    req : string
+        string containging either complete HEX code for command or Decimal Format from NCD API
+    encoding : string
+        string containing either "hex" or "dec"
+
+    Returns
+    -------
+    string
+        returns data from Current Monitor
+
+    """
+    req = req.decode(encoding)
+    s = socket.socket()
+    s.settimeout(6)
+    s.connect(TCP_IP, TCP_PORT)
+    s.send(req)
+    data = s.recv(BUFFER_SIZE)
+    s.close()
+    return data
+
 
 # Read current and return bytes
 def readCurrent():
     # Set Command to be sent to Current Monitor
     # In this case query all 6 channels | https://ncd.io/communicating-to-current-monitoring-controllers/
-    MESSAGE = 'aa0ebc320a54926a010106000004551374'.decode('hex')
+    MESSAGE = 'aa0ebc320a54926a010106000004551374'
     #MESSAGE = 'AA03FE7C0128'.decode('hex')
 
-    #Create Socket
-    s = socket.socket()
-    s.settimeout(6)
-    s.connect((TCP_IP, TCP_PORT))
-    # Send Message to Current Monitor
-    s.send(MESSAGE)
-    # Collect response data
     try:
-        data = s.recv(BUFFER_SIZE)
+        data = send_command(MESSAGE, 'hex')
         while len(data) < 1:
-            data = s.recv(BUFFER_SIZE)
+            data = send_command(MESSAGE, 'hex')
     except socket.timeout as e:
         time.sleep(sleep_time)
-        data = s.recv(BUFFER_SIZE)
+        data = send_command(MESSAGE, 'hex')
         print "socket connection died"
-    s.close()
+        
     # Convert response to hex
     data = data.encode('hex')
     #Split into Byte Pairs
