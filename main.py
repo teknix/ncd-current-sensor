@@ -48,7 +48,7 @@ def send_command(req, encoding):
     req = req.decode(encoding)
     s = socket.socket()
     s.settimeout(6)
-    s.connect(TCP_IP, TCP_PORT)
+    s.connect((TCP_IP, TCP_PORT))
     s.send(req)
     data = s.recv(BUFFER_SIZE)
     s.close()
@@ -70,7 +70,7 @@ def readCurrent():
         time.sleep(sleep_time)
         data = send_command(MESSAGE, 'hex')
         print "socket connection died"
-        
+
     # Convert response to hex
     data = data.encode('hex')
     #Split into Byte Pairs
