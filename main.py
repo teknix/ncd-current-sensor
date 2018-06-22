@@ -70,6 +70,7 @@ def readCurrent():
         time.sleep(sleep_time)
         data = send_command(MESSAGE, 'hex')
         print "socket connection died"
+        print e
 
     # Convert response to hex
     data = data.encode('hex')
