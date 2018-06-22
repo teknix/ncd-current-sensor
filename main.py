@@ -57,6 +57,15 @@ def send_command(req, encoding):
 
 # Read current and return bytes
 def readCurrent():
+    """Reads NCD Current Monitor Value and breaks data into pairs for calculations.
+
+    Returns
+    -------
+    type
+        Pairs of data for given current channel.
+
+    """
+
     # Set Command to be sent to Current Monitor
     # In this case query all 6 channels | https://ncd.io/communicating-to-current-monitoring-controllers/
     MESSAGE = 'aa0ebc320a54926a010106000004551374'
