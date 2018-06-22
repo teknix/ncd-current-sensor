@@ -52,6 +52,8 @@ def readCurrent():
             data = s.recv(BUFFER_SIZE)
     except socket.timeout as e:
         time.sleep(sleep_time)
+        data = s.recv(BUFFER_SIZE)
+        print "socket connection died"
     s.close()
     # Convert response to hex
     data = data.encode('hex')
