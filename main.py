@@ -1,8 +1,9 @@
 #!/usr/bin/python
 from client_mqtt import ClientMQTT
 from threading import Thread
-import sys,time,re,datetime,json,socket
+import sys,time,re,datetime,json,socket,errno
 from pymongo import MongoClient
+from socket import error as socket_error
 
 # Set NCD Current Monitor IP address
 TCP_IP = '192.168.1.102'
@@ -79,6 +80,14 @@ def readCurrent():
         time.sleep(sleep_time)
         data = send_command(MESSAGE, 'hex')
         print "socket connection died"
+        print e
+    except socket.error as e:
+        if e.errno != e.ECONNREFUSED:
+            # Not the error we are looking for, re-raise
+            raise e
+        time.sleep(sleep_time)
+        data = send_command(MESSAGE, 'hex')
+        print "socket connection refused"
         print e
 
     # Convert response to hex
