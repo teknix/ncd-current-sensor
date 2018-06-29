@@ -54,14 +54,15 @@ def send_command(req, encoding):
         s.send(req)
         data = s.recv(BUFFER_SIZE)
     except socket.error as e:
-        if e.errno != e.ECONNREFUSED:
-            # Not the error we are looking for, re-raise
-            raise e
+        # if e.errno != errno.ECONNREFUSE:
+        #     print e
+        #     # Not the error we are looking for, re-raise
+        #     raise e
         time.sleep(sleep_time)
         s.connect((TCP_IP, TCP_PORT))
         s.send(req)
         data = s.recv(BUFFER_SIZE)
-        print "socket connection refused"
+        # print "socket connection refused"
         print e
     # s.connect((TCP_IP, TCP_PORT))
     # s.send(req)
@@ -96,7 +97,7 @@ def readCurrent():
         print "socket connection died"
         print e
     except socket.error as e:
-        if e.errno != e.ECONNREFUSED:
+        if e.errno != errno.ECONNREFUSE:
             # Not the error we are looking for, re-raise
             raise e
         time.sleep(sleep_time)
