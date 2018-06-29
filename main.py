@@ -97,9 +97,10 @@ def readCurrent():
         print "socket connection died"
         print e
     except socket.error as e:
-        if e.errno != errno.ECONNREFUSE:
-            # Not the error we are looking for, re-raise
-            raise e
+        print e
+        # if e.errno != errno.ECONNREFUSE:
+        #     # Not the error we are looking for, re-raise
+        #     raise e
         time.sleep(sleep_time)
         data = send_command(MESSAGE, 'hex')
         print "socket connection refused"
