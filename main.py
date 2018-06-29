@@ -30,6 +30,11 @@ MONGO_PORT = 27017
 #Setup Amp Channel Names
 channels = ["infeed", "soaker", "dryerMain", "dryerOut", "grinder", "classifier"]
 
+def dump(obj):
+   for attr in dir(obj):
+       if hasattr( obj, attr ):
+           print( "obj.%s = %s" % (attr, getattr(obj, attr)))
+
 def send_command(req, encoding):
     """Send either Decimal or Hex command to NCD Current Monitor.
 
@@ -55,7 +60,7 @@ def send_command(req, encoding):
         data = s.recv(BUFFER_SIZE)
     except socket.error as e:
         # if e.errno != errno.ECONNREFUSE:
-        #     print e
+        #     dump(e)
         #     # Not the error we are looking for, re-raise
         #     raise e
         time.sleep(sleep_time)
@@ -63,7 +68,7 @@ def send_command(req, encoding):
         s.send(req)
         data = s.recv(BUFFER_SIZE)
         # print "socket connection refused"
-        print e
+        dump(e)
     # s.connect((TCP_IP, TCP_PORT))
     # s.send(req)
     # data = s.recv(BUFFER_SIZE)
@@ -95,16 +100,16 @@ def readCurrent():
         time.sleep(sleep_time)
         data = send_command(MESSAGE, 'hex')
         print "socket connection died"
-        print e
+        dump(e)
     except socket.error as e:
-        print e
+        dump(e)
         # if e.errno != errno.ECONNREFUSE:
         #     # Not the error we are looking for, re-raise
         #     raise e
         time.sleep(sleep_time)
         data = send_command(MESSAGE, 'hex')
         print "socket connection refused"
-        print e
+        dump(e)
 
     # Convert response to hex
     data = data.encode('hex')
