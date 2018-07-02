@@ -1,11 +1,12 @@
 #!/usr/bin/python
 from client_mqtt import ClientMQTT
 from threading import Thread
-import sys,time,re,datetime,json,socket,errno, decimal
+import sys,time,re,datetime,json,socket,errno
 from pymongo import MongoClient
 from socket import error as socket_error
 
 # Set Decimal Precision
+from decimal import *
 getcontext().prec = 2
 
 # Set NCD Current Monitor IP address
