@@ -7,7 +7,7 @@ from socket import error as socket_error
 
 # Set Decimal Precision
 from decimal import *
-getcontext().prec = 4
+getcontext().prec = 2
 
 # Set NCD Current Monitor IP address
 TCP_IP = '192.168.1.102'
