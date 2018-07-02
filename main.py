@@ -131,7 +131,7 @@ def calcAmps(dataPairs):
         mid = most + 1
         low = mid + 1
         # Calc channel amp value 3 bytes per channel
-        channel[channels[int(count) - 1]] = str(Decimal(((int(dataPairs[most],16)*65536) + (int(dataPairs[mid],16) * 265) + int(dataPairs[low],16)) / 1000))
+        channel[channels[int(count) - 1]] = str(((Decimal(dataPairs[most],16)*65536) + (Decimal(dataPairs[mid],16) * 265) + Decimal(dataPairs[low],16)) / 1000)
         count = count + 1
         most = most + 3
 
