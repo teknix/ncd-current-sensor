@@ -1,9 +1,12 @@
 #!/usr/bin/python
 from client_mqtt import ClientMQTT
 from threading import Thread
-import sys,time,re,datetime,json,socket,errno
+import sys,time,re,datetime,json,socket,errno, decimal
 from pymongo import MongoClient
 from socket import error as socket_error
+
+# Set Decimal Precision
+getcontext().prec = 2
 
 # Set NCD Current Monitor IP address
 TCP_IP = '192.168.1.102'
@@ -127,7 +130,7 @@ def calcAmps(dataPairs):
         mid = most + 1
         low = mid + 1
         # Calc channel amp value 3 bytes per channel
-        channel[channels[int(count) - 1]] = str(round(((int(dataPairs[most],16)*65536) + (int(dataPairs[mid],16) * 265) + int(dataPairs[low],16)) / 1000, 3))
+        channel[channels[int(count) - 1]] = str(Decimal(((int(dataPairs[most],16)*65536) + (int(dataPairs[mid],16) * 265) + int(dataPairs[low],16)) / 1000))
         count = count + 1
         most = most + 3
 
