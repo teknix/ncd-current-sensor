@@ -5,6 +5,10 @@ import sys,time,re,datetime,json,socket,errno
 from pymongo import MongoClient
 from socket import error as socket_error
 
+# Set Decimal Precision
+from decimal import *
+getcontext().prec = 2
+
 # Set NCD Current Monitor IP address
 TCP_IP = '192.168.1.102'
 # Set Listening Port on Remote Current Monitor
@@ -124,12 +128,15 @@ def calcAmps(dataPairs):
     most = 2
     while (count <= chanNum):
 
-        mid = most + 1
-        low = mid + 1
-        # Calc channel amp value 3 bytes per channel
-        channel[channels[int(count) - 1]] = str(round(((int(dataPairs[most],16)*65536) + (int(dataPairs[mid],16) * 265) + int(dataPairs[low],16)) / 1000, 2))
-        count = count + 1
-        most = most + 3
+        try:
+            mid = most + 1
+            low = mid + 1
+            # Calc channel amp value 3 bytes per channel
+            channel[channels[int(count) - 1]] = str( ( round(int(dataPairs[most],16) * 65536,2) + round(int(dataPairs[mid],16) * 265,2) + round(int(dataPairs[low],16),2)) / 1000)
+            count = count + 1
+            most = most + 3
+        except IndexError:
+            raise
 
     return channel
 
@@ -167,8 +174,25 @@ def start_server_monitor():
 
             time.sleep(sleep_time)
 
-        except ValueError:
+        except IndexError:
             print('ERROR|Value')
+            #read Current Data
+            data = readCurrent()
+            channelData = calcAmps(data)
+            channelData['time'] = str(datetime.datetime.now())
+            ampData = json.dumps(channelData)
+
+            # publish current data
+            write_mqtt(mqtt_topic, ampData)
+
+            #Save data to MONGODB
+            mongo = MongoClient(MONGO_IP, MONGO_PORT)
+            mongoDB = mongo['washline']
+            ampdata  = mongoDB.amps
+            ampdata_id = ampdata.insert_one(channelData).inserted_id
+
+
+            time.sleep(sleep_time)
 
     return
 
