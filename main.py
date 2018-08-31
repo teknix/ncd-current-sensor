@@ -169,7 +169,7 @@ def start_server_monitor():
             mongoDB = mongo['washline']
             ampdata  = mongoDB.amps
             ampdata_id = ampdata.insert_one(channelData).inserted_id
-            for ampInfo in ampData:
+            for ampInfo in channelData:
             	print(ampInfo)
 
             time.sleep(sleep_time)
