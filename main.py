@@ -132,7 +132,7 @@ def calcAmps(dataPairs):
             mid = most + 1
             low = mid + 1
             # Calc channel amp value 3 bytes per channel
-            channel[channels[int(count) - 1]] = str( ( round(int(dataPairs[most],16) * 65536,2) + round(int(dataPairs[mid],16) * 265,2) + round(int(dataPairs[low],16),2)) / 1000)
+            channel[channels[int(count) - 1]] = str( ( round(int(dataPairs[most],16) * 65536,1) + round(int(dataPairs[mid],16) * 265,1) + round(int(dataPairs[low],16),1)) / 1000)
             count = count + 1
             most = most + 3
         except IndexError:
@@ -160,17 +160,16 @@ def start_server_monitor():
             channelData = calcAmps(data)
             channelData['time'] = str(datetime.datetime.now())
             ampData = json.dumps(channelData)
+            if channelData['classifier'] > 1 and channelData['classifier'] < 50:
+	            # publish current data
+	            write_mqtt(mqtt_topic, ampData)
 
-            # publish current data
-            write_mqtt(mqtt_topic, ampData)
-
-            #Save data to MONGODB
-            mongo = MongoClient(MONGO_IP, MONGO_PORT)
-            mongoDB = mongo['washline']
-            ampdata  = mongoDB.amps
-            ampdata_id = ampdata.insert_one(channelData).inserted_id
-
-
+	            #Save data to MONGODB
+	            mongo = MongoClient(MONGO_IP, MONGO_PORT)
+	            mongoDB = mongo['washline']
+	            ampdata  = mongoDB.amps
+	            ampdata_id = ampdata.insert_one(channelData).inserted_id
+            
             time.sleep(sleep_time)
 
         except IndexError:
