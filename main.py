@@ -160,10 +160,11 @@ def start_server_monitor():
             channelData = calcAmps(data)
             channelData['time'] = str(datetime.datetime.now())
             ampData = json.dumps(channelData)
-            if float(channelData['classifier']) > 1 and float(channelData['classifier']) < 50:
-	            # publish current data
-	            write_mqtt(mqtt_topic, ampData)
 
+            #write mqtt channel
+            write_mqtt(mqtt_topic, ampData)
+
+            if float(channelData['classifier']) > 1 and float(channelData['classifier']) < 50:	            
 	            #Save data to MONGODB
 	            mongo = MongoClient(MONGO_IP, MONGO_PORT)
 	            mongoDB = mongo['washline']
