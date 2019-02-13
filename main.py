@@ -136,7 +136,7 @@ def calcAmps(dataPairs):
             count = count + 1
             most = most + 3
         except IndexError:
-            raise
+            pass
 
     return channel
 
