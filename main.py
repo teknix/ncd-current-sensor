@@ -136,6 +136,7 @@ def calcAmps(dataPairs):
             count = count + 1
             most = most + 3
         except IndexError:
+            print 'index error and going to shit'
             start_server_monitor()
 
     return channel
