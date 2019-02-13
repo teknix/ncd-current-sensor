@@ -25,7 +25,7 @@ mqtt_server = '192.168.1.10'
 #MQTT Port Number, usally 1883
 mqtt_port = 1883
 #How long of a sample window (in seconds)
-sleep_time = 2 # 2 seconds
+sleep_time = 3.2 # 2 seconds
 
 #Mongo Server
 MONGO_IP = '192.168.1.9'
