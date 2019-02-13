@@ -201,7 +201,7 @@ def main():
     try:
         st = Thread(target=start_server_monitor, args=())
         st.start()
-        sleep(30)
+        time.sleep(30)
         st.exit()
 
     except (KeyboardInterrupt):
