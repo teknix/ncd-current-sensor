@@ -201,8 +201,6 @@ def main():
     try:
         st = Thread(target=start_server_monitor, args=())
         st.start()
-        time.sleep(30)
-        st.exit()
 
     except (KeyboardInterrupt):
         print "Interrupt received"
