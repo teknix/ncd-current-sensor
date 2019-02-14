@@ -210,7 +210,10 @@ def main():
     mongo = MongoClient(MONGO_IP, MONGO_PORT)
     mongoDB = mongo['washline']
     washlineStatus  = mongoDB.status
-    statusdata_id = washlineStatus.insert_one(firstStatus).inserted_id
+    #statusdata_id = washlineStatus.insert_one(firstStatus).inserted_id
+    currentStatus = washlineStatus.find_one(sort=[( '_id', pymongo.DESCENDING )])
+    print currentStatus
+    SystemExit
     try:
         st = Thread(target=start_server_monitor, args=())
         st.start()
