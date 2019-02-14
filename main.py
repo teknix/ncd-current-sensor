@@ -211,7 +211,7 @@ def main():
     mongoDB = mongo['washline']
     washlineStatus  = mongoDB.status
     #statusdata_id = washlineStatus.insert_one(firstStatus).inserted_id
-    currentStatus = washlineStatus.find_one(sort=[( '_id', pymongo.DESCENDING )])
+    currentStatus = washlineStatus.find_one(sort=[( '_id', -1 )])
     print currentStatus
     SystemExit
     try:
