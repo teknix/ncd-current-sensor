@@ -199,7 +199,7 @@ def start_server_monitor():
 
 def main():
     firstStatus  = {
-        "running": false,
+        "running": 'no',
         "material": "thintote",
         "source": "agriplas",
         "type": "factional",
