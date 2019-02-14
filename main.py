@@ -165,13 +165,13 @@ def start_server_monitor():
             #write mqtt channel
             write_mqtt(mqtt_topic, ampData)
 
-            if float(channelData['classifier']) > 1 and float(channelData['classifier']) < 50:	            
+            if float(channelData['classifier']) > 1 and float(channelData['classifier']) < 50:
 	            #Save data to MONGODB
 	            mongo = MongoClient(MONGO_IP, MONGO_PORT)
 	            mongoDB = mongo['washline']
 	            ampdata  = mongoDB.amps
 	            ampdata_id = ampdata.insert_one(channelData).inserted_id
-            
+
             time.sleep(sleep_time)
 
         except IndexError:
@@ -198,6 +198,19 @@ def start_server_monitor():
 
 
 def main():
+    firstStatus  = {
+        "running": false,
+        "material": "thintote",
+        "source": "agriplas",
+        "type": "factional",
+        "box": 22,
+        "currentLbs": 1206,
+        "currentLbsH": 990
+    }
+    mongo = MongoClient(MONGO_IP, MONGO_PORT)
+    mongoDB = mongo['washline']
+    washlineStatus  = mongoDB.status
+    statusdata_id = washlineStatus.insert_one(firstStatus).inserted_id
     try:
         st = Thread(target=start_server_monitor, args=())
         st.start()
