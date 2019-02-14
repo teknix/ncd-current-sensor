@@ -212,7 +212,7 @@ def main():
     washlineStatus  = mongoDB.status
     #statusdata_id = washlineStatus.insert_one(firstStatus).inserted_id
     currentStatus = washlineStatus.find_one(sort=[( '_id', -1 )])
-    print currentStatus
+    print json.dumps(currentStatus)
     SystemExit
     try:
         st = Thread(target=start_server_monitor, args=())
