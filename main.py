@@ -164,13 +164,20 @@ def start_server_monitor():
 
             #write mqtt channel
             write_mqtt(mqtt_topic, ampData)
+            mongo = MongoClient(MONGO_IP, MONGO_PORT)
+            mongoDB = mongo['washline']
+            washlineStatus  = mongoDB.status
+            #statusdata_id = washlineStatus.insert_one(firstStatus).inserted_id
+            currentStatus = washlineStatus.find_one(sort=[( '_id', -1 )])
 
-            if float(channelData['classifier']) > 1 and float(channelData['classifier']) < 50:
+
+            if float(channelData['classifier']) > 1 and float(channelData['classifier']) < 50 and currentStatus["running"] == 'yes':
 	            #Save data to MONGODB
-	            mongo = MongoClient(MONGO_IP, MONGO_PORT)
-	            mongoDB = mongo['washline']
+	            #mongo = MongoClient(MONGO_IP, MONGO_PORT)
+	            #mongoDB = mongo['washline']
 	            ampdata  = mongoDB.amps
 	            ampdata_id = ampdata.insert_one(channelData).inserted_id
+                print 'saved data to mongo'
 
             time.sleep(sleep_time)
 
@@ -198,22 +205,20 @@ def start_server_monitor():
 
 
 def main():
-    firstStatus  = {
-        "running": 'no',
-        "material": "thintote",
-        "source": "agriplas",
-        "type": "factional",
-        "box": 22,
-        "currentLbs": 1206,
-        "currentLbsH": 990
-    }
-    mongo = MongoClient(MONGO_IP, MONGO_PORT)
-    mongoDB = mongo['washline']
-    washlineStatus  = mongoDB.status
+    # firstStatus  = {
+    #     "running": 'no',
+    #     "material": "thintote",
+    #     "source": "agriplas",
+    #     "type": "factional",
+    #     "box": 22,
+    #     "currentLbs": 1206,
+    #     "currentLbsH": 990
+    # }
+    #mongo = MongoClient(MONGO_IP, MONGO_PORT)
+    #mongoDB = mongo['washline']
+    #washlineStatus  = mongoDB.status
     #statusdata_id = washlineStatus.insert_one(firstStatus).inserted_id
-    currentStatus = washlineStatus.find_one(sort=[( '_id', -1 )])
-    print currentStatus["running"]
-    SystemExit
+    #currentStatus = washlineStatus.find_one(sort=[( '_id', -1 )])
     try:
         st = Thread(target=start_server_monitor, args=())
         st.start()
