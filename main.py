@@ -172,11 +172,8 @@ def start_server_monitor():
 
 
             if float(channelData['classifier']) > 1 and float(channelData['classifier']) < 50 and currentStatus["running"] == 'yes':
-	            #Save data to MONGODB
-	            #mongo = MongoClient(MONGO_IP, MONGO_PORT)
-	            #mongoDB = mongo['washline']
-	            ampdata  = mongoDB.amps
-	            ampdata_id = ampdata.insert_one(channelData).inserted_id
+                ampdata  = mongoDB.amps
+                ampdata_id = ampdata.insert_one(channelData).inserted_id
                 print 'saved data to mongo'
 
             time.sleep(sleep_time)
