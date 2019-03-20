@@ -109,7 +109,7 @@ def readCurrent():
     except socket.timeout as e:
         time.sleep(sleep_time)
         data = send_command(MESSAGE, 'hex')
-        print "socket connection died"
+        print("socket connection died")
         dump(e)
     except socket.error as e:
         dump(e)
@@ -118,7 +118,7 @@ def readCurrent():
         #     raise e
         time.sleep(sleep_time)
         data = send_command(MESSAGE, 'hex')
-        print "socket connection refused"
+        print("socket connection refused")
         dump(e)
 
     # Convert response to hex
@@ -142,7 +142,7 @@ def calcAmps(dataPairs):
             count = count + 1
             most = most + 3
         except IndexError:
-            print 'index error and going to shit'
+            print('index error and going to shit')
             start_server_monitor()
 
     return channel
@@ -180,7 +180,7 @@ def start_server_monitor():
             if float(channelData['classifier']) > 1 and float(channelData['classifier']) < 50 and currentStatus["running"] == 'yes':
                 ampdata  = mongoDB.amps
                 ampdata_id = ampdata.insert_one(channelData).inserted_id
-                print 'saved data to mongo'
+                print('saved data to mongo')
 
             time.sleep(sleep_time)
 
