@@ -1,9 +1,8 @@
 #!/usr/bin/python
 from client_mqtt import ClientMQTT
 from threading import Thread
-import sys,time,re,datetime,json,socket,errno
+import time, re, datetime, json, socket
 from pymongo import MongoClient
-from socket import error as socket_error
 
 # Set Decimal Precision
 from decimal import *
@@ -15,29 +14,33 @@ TCP_IP = '192.168.1.102'
 TCP_PORT = 2101
 # Set Buffer Size
 BUFFER_SIZE = 1024
-#Number of Current Monitor Channels
+# Number of Current Monitor Channels
 chanNum = 6
 
-#MQTT Topic
+# MQTT Topic
 mqtt_topic = 'amps'
-#MQTT Server IP or HOSTNAME
+# MQTT Server IP or HOSTNAME
 mqtt_server = '192.168.1.10'
-#MQTT Port Number, usally 1883
+# MQTT Port Number, usally 1883
 mqtt_port = 1883
-#How long of a sample window (in seconds)
+# How long of a sample window (in seconds)
 sleep_time = 3.2 # 2 seconds
 
-#Mongo Server
+# Mongo Server
 MONGO_IP = '192.168.1.9'
 MONGO_PORT = 27017
 
-#Setup Amp Channel Names
-channels = ["infeed", "soaker", "dryerMain", "dryerOut", "grinder", "classifier"]
+# Setup Amp Channel Names
+channels = ["infeed", "soaker", "dryerMain",
+            "dryerOut", "grinder", "classifier"
+            ]
+
 
 def dump(obj):
-   for attr in dir(obj):
-       if hasattr( obj, attr ):
-           print( "obj.%s = %s" % (attr, getattr(obj, attr)))
+    for attr in dir(obj):
+        if hasattr(obj, attr):
+            print("obj.%s = %s" % (attr, getattr(obj, attr)))
+
 
 def send_command(req, encoding):
     """Send either Decimal or Hex command to NCD Current Monitor.
@@ -45,7 +48,8 @@ def send_command(req, encoding):
     Parameters
     ----------
     req : string
-        string containging either complete HEX code for command or Decimal Format from NCD API
+        string containging either complete HEX code
+        for command or Decimal Format from NCD API
     encoding : string
         string containing either "hex" or "dec"
 
@@ -82,7 +86,8 @@ def send_command(req, encoding):
 
 # Read current and return bytes
 def readCurrent():
-    """Reads NCD Current Monitor Value and breaks data into pairs for calculations.
+    """Reads NCD Current Monitor Value and
+    breaks data into pairs for calculations.
 
     Returns
     -------
@@ -92,9 +97,10 @@ def readCurrent():
     """
 
     # Set Command to be sent to Current Monitor
-    # In this case query all 6 channels | https://ncd.io/communicating-to-current-monitoring-controllers/
+    # In this case query all 6 channels
+    # https://ncd.io/communicating-to-current-monitoring-controllers/
     MESSAGE = 'aa0ebc320a54926a010106000004551374'
-    #MESSAGE = 'AA03FE7C0128'.decode('hex')
+    # MESSAGE = 'AA03FE7C0128'.decode('hex')
 
     try:
         data = send_command(MESSAGE, 'hex')
@@ -117,7 +123,7 @@ def readCurrent():
 
     # Convert response to hex
     data = data.encode('hex')
-    #Split into Byte Pairs
+    # Split into Byte Pairs
     pairs = re.findall('..?', data)
     return pairs
 
