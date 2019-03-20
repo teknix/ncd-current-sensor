@@ -147,6 +147,7 @@ def calcAmps(dataPairs):
 
     return channel
 
+
 def write_mqtt(topic, payload):
     mqtt_client = ClientMQTT(ip_address=mqtt_server, port=mqtt_port)
     mqtt_client.publish(topic, payload)
@@ -157,28 +158,29 @@ def start_server_mqtt():
     mqtt_client = ClientMQTT(ip_address=mqtt_server, port=mqtt_port)
     mqtt_client.simulate()
 
+
 def start_server_monitor():
 
     while True:
 
         try:
-            #read Current Data
+            # read Current Data
             data = readCurrent()
             channelData = calcAmps(data)
             channelData['time'] = str(datetime.datetime.now())
             ampData = json.dumps(channelData)
 
-            #write mqtt channel
+            # write mqtt channel
             write_mqtt(mqtt_topic, ampData)
             mongo = MongoClient(MONGO_IP, MONGO_PORT)
             mongoDB = mongo['washline']
-            washlineStatus  = mongoDB.status
-            #statusdata_id = washlineStatus.insert_one(firstStatus).inserted_id
-            currentStatus = washlineStatus.find_one(sort=[( '_id', -1 )])
+            washlineStatus = mongoDB.status
+            # statusdata_id = washlineStatus.insert_one(firstStatus).inserted_id
+            currentStatus = washlineStatus.find_one(sort=[('_id', -1)])
 
 
             if float(channelData['classifier']) > 1 and float(channelData['classifier']) < 50 and currentStatus["running"] == 'yes':
-                ampdata  = mongoDB.amps
+                ampdata = mongoDB.amps
                 ampdata_id = ampdata.insert_one(channelData).inserted_id
                 print('saved data to mongo')
 
@@ -186,7 +188,7 @@ def start_server_monitor():
 
         except IndexError:
             print('ERROR|Value')
-            #read Current Data
+            # read Current Data
             data = readCurrent()
             channelData = calcAmps(data)
             channelData['time'] = str(datetime.datetime.now())
@@ -195,10 +197,10 @@ def start_server_monitor():
             # publish current data
             write_mqtt(mqtt_topic, ampData)
 
-            #Save data to MONGODB
+            # Save data to MONGODB
             mongo = MongoClient(MONGO_IP, MONGO_PORT)
             mongoDB = mongo['washline']
-            ampdata  = mongoDB.amps
+            ampdata = mongoDB.amps
             ampdata_id = ampdata.insert_one(channelData).inserted_id
 
 
@@ -217,11 +219,11 @@ def main():
     #     "currentLbs": 1206,
     #     "currentLbsH": 990
     # }
-    #mongo = MongoClient(MONGO_IP, MONGO_PORT)
-    #mongoDB = mongo['washline']
-    #washlineStatus  = mongoDB.status
-    #statusdata_id = washlineStatus.insert_one(firstStatus).inserted_id
-    #currentStatus = washlineStatus.find_one(sort=[( '_id', -1 )])
+    # mongo = MongoClient(MONGO_IP, MONGO_PORT)
+    # mongoDB = mongo['washline']
+    # washlineStatus  = mongoDB.status
+    # statusdata_id = washlineStatus.insert_one(firstStatus).inserted_id
+    # currentStatus = washlineStatus.find_one(sort=[( '_id', -1 )])
     try:
         st = Thread(target=start_server_monitor, args=())
         st.start()
@@ -230,7 +232,6 @@ def main():
         print "Interrupt received"
         # cleanup()
         raise SystemExit
-
 
     # Used for just throwing data at the MQTT server from the IOx application
     # mt = Thread(target=start_server_mqtt, args=())
