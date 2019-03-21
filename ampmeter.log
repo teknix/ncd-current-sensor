@@ -1,0 +1,475 @@
+2019-03-21 14:03:54,670 - AmpMeter_Rewrite - INFO - Setting up Socket
+2019-03-21 14:03:54,671 - AmpMeter_Rewrite - INFO - Passed socket to NCD
+2019-03-21 14:03:54,672 - AmpMeter_Rewrite - INFO - Connecting to AmpMeter
+2019-03-21 14:03:54,674 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:03:54,709 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 32, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 27, 59, 51])
+2019-03-21 14:03:58,214 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:03:58,250 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 32, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 24, 56, 45])
+2019-03-21 14:04:01,752 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:04:01,770 - AmpMeter_Rewrite - INFO - AmpMeter returnedFalse
+2019-03-21 14:04:05,274 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:04:05,276 - AmpMeter_Rewrite - INFO - AmpMeter returnedFalse
+2019-03-21 14:04:08,781 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:04:08,783 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 32, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 25, 57, 47])
+2019-03-21 14:04:12,288 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:04:12,290 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 33, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 25, 58, 49])
+2019-03-21 14:04:15,795 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:04:15,797 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 33, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 25, 58, 49])
+2019-03-21 14:04:19,301 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:04:19,303 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 31, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 28, 59, 51])
+2019-03-21 14:04:22,808 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:04:22,811 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 31, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 28, 59, 51])
+2019-03-21 14:04:26,316 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:04:26,318 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 31, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 24, 55, 43])
+2019-03-21 14:04:29,823 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:04:29,825 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 33, 0, 0, 0, 0, 0, 5, 0, 0, 0, 0, 0, 0, 0, 0, 24, 62, 57])
+2019-03-21 14:04:33,330 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:04:33,332 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 33, 0, 0, 0, 0, 0, 5, 0, 0, 0, 0, 0, 0, 0, 0, 24, 62, 57])
+2019-03-21 14:04:36,837 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:04:36,839 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 33, 0, 0, 0, 0, 0, 5, 0, 0, 0, 0, 0, 0, 0, 0, 27, 65, 63])
+2019-03-21 14:04:40,344 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:04:40,346 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 33, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 27, 60, 53])
+2019-03-21 14:04:43,850 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:04:43,853 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 31, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 27, 58, 49])
+2019-03-21 14:04:47,357 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:04:47,359 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 31, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 27, 58, 49])
+2019-03-21 14:04:50,864 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:04:50,866 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 31, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 27, 58, 49])
+2019-03-21 14:04:54,371 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:04:54,373 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 33, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 26, 59, 51])
+2019-03-21 14:04:57,893 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:04:57,896 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 33, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 26, 61, 55])
+2019-03-21 14:05:01,401 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:05:01,404 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 32, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 24, 58, 49])
+2019-03-21 14:05:04,909 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:05:04,911 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 32, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 24, 56, 45])
+2019-03-21 14:05:08,416 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:05:08,418 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 32, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 30, 62, 57])
+2019-03-21 14:05:11,923 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:05:11,925 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 32, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 30, 62, 57])
+2019-03-21 14:05:15,430 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:05:15,432 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 32, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 30, 64, 61])
+2019-03-21 14:05:18,937 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:05:18,939 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 33, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 26, 61, 55])
+2019-03-21 14:05:22,444 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:05:22,446 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 33, 0, 0, 0, 0, 0, 2, 0, 0, 2, 0, 0, 0, 0, 0, 26, 63, 59])
+2019-03-21 14:05:25,951 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:05:25,953 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 33, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 25, 60, 53])
+2019-03-21 14:05:29,458 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:05:29,461 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 33, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 25, 60, 53])
+2019-03-21 14:05:32,966 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:05:32,968 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 33, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 25, 58, 49])
+2019-03-21 14:05:36,473 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:05:36,475 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 31, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 26, 57, 47])
+2019-03-21 14:05:39,981 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:05:39,983 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 31, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 26, 57, 47])
+2019-03-21 14:05:43,488 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:05:43,490 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 31, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 27, 58, 49])
+2019-03-21 14:05:46,995 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:05:46,997 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 32, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 27, 59, 51])
+2019-03-21 14:05:50,502 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:05:50,504 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 32, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 27, 59, 51])
+2019-03-21 14:05:54,009 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:05:54,011 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 31, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 29, 60, 53])
+2019-03-21 14:05:57,516 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:05:57,519 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 31, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 29, 60, 53])
+2019-03-21 14:06:01,024 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:06:01,026 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 31, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 25, 56, 45])
+2019-03-21 14:06:04,532 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:06:04,534 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 33, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 25, 58, 49])
+2019-03-21 14:06:08,039 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:06:08,041 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 33, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 25, 58, 49])
+2019-03-21 14:06:11,546 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:06:11,548 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 31, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 27, 58, 49])
+2019-03-21 14:06:15,053 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:06:15,055 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 31, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 27, 60, 53])
+2019-03-21 14:06:18,560 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:06:18,562 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 31, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 29, 62, 57])
+2019-03-21 14:06:22,067 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:06:22,069 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 32, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 29, 63, 59])
+2019-03-21 14:06:25,574 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:06:25,577 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 32, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 29, 61, 55])
+2019-03-21 14:06:29,082 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:06:29,084 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 33, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 27, 60, 53])
+2019-03-21 14:06:32,589 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:06:32,591 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 33, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 27, 60, 53])
+2019-03-21 14:06:36,096 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:06:36,098 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 33, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 26, 59, 51])
+2019-03-21 14:06:39,603 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:06:39,605 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 32, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 26, 58, 49])
+2019-03-21 14:06:43,110 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:06:43,112 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 32, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 26, 58, 49])
+2019-03-21 14:06:46,617 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:06:46,620 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 34, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 27, 61, 55])
+2019-03-21 14:06:50,125 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:06:50,127 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 34, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 27, 61, 55])
+2019-03-21 14:06:53,632 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:06:53,634 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 34, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 29, 63, 59])
+2019-03-21 14:06:57,139 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:06:57,141 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 31, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 29, 62, 57])
+2019-03-21 14:07:00,646 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:07:00,648 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 31, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 29, 62, 57])
+2019-03-21 14:07:04,153 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:07:04,155 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 33, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 28, 63, 59])
+2019-03-21 14:07:07,660 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:07:07,663 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 33, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 28, 61, 55])
+2019-03-21 14:07:11,168 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:07:11,170 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 34, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 26, 60, 53])
+2019-03-21 14:07:14,675 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:07:14,677 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 34, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 26, 62, 57])
+2019-03-21 14:07:18,182 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:07:18,184 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 34, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 26, 62, 57])
+2019-03-21 14:07:21,689 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:07:21,691 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 33, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 27, 62, 57])
+2019-03-21 14:07:25,196 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:07:25,198 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 33, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 27, 62, 57])
+2019-03-21 14:07:28,703 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:07:28,706 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 31, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 27, 60, 53])
+2019-03-21 14:07:32,211 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:07:32,213 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 31, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 27, 58, 49])
+2019-03-21 14:07:35,718 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:07:35,720 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 31, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 28, 59, 51])
+2019-03-21 14:07:39,225 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:07:39,227 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 34, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 28, 62, 57])
+2019-03-21 14:07:42,732 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:07:42,734 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 34, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 28, 62, 57])
+2019-03-21 14:07:46,239 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:07:46,241 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 33, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 26, 59, 51])
+2019-03-21 14:07:49,746 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:07:49,748 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 33, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 26, 59, 51])
+2019-03-21 14:07:53,253 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:07:53,255 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 33, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 27, 60, 53])
+2019-03-21 14:07:56,761 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:07:56,763 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 33, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 27, 60, 53])
+2019-03-21 14:08:00,268 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:08:00,270 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 33, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 27, 60, 53])
+2019-03-21 14:08:03,775 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:08:03,777 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 31, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 28, 59, 51])
+2019-03-21 14:08:07,282 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:08:07,284 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 31, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 28, 59, 51])
+2019-03-21 14:08:10,790 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:08:10,792 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 31, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 28, 59, 51])
+2019-03-21 14:08:14,297 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:08:14,299 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 33, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 28, 61, 55])
+2019-03-21 14:08:17,804 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:08:17,807 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 33, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 28, 61, 55])
+2019-03-21 14:08:21,312 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:08:21,314 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 32, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 31, 63, 59])
+2019-03-21 14:08:24,819 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:08:24,821 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 32, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 31, 63, 59])
+2019-03-21 14:08:28,326 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:08:28,329 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 32, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 23, 55, 43])
+2019-03-21 14:08:31,833 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:08:31,836 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 32, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 23, 55, 43])
+2019-03-21 14:08:35,340 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:08:35,343 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 32, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 23, 55, 43])
+2019-03-21 14:08:38,848 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:08:38,850 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 31, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 27, 58, 49])
+2019-03-21 14:08:42,355 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:08:42,357 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 31, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 27, 60, 53])
+2019-03-21 14:08:45,862 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:08:45,864 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 31, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 29, 62, 57])
+2019-03-21 14:08:49,369 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:08:49,371 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 31, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 29, 62, 57])
+2019-03-21 14:08:52,876 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:08:52,879 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 31, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 29, 60, 53])
+2019-03-21 14:08:56,383 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:08:56,386 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 31, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 27, 58, 49])
+2019-03-21 14:08:59,891 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:08:59,893 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 31, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 27, 58, 49])
+2019-03-21 14:09:03,398 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:09:03,400 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 31, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 27, 58, 49])
+2019-03-21 14:09:06,905 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:09:06,907 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 33, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 27, 62, 57])
+2019-03-21 14:09:10,413 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:09:10,415 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 33, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 27, 62, 57])
+2019-03-21 14:09:13,920 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:09:13,922 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 32, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 26, 60, 53])
+2019-03-21 14:09:17,427 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:09:17,429 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 32, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 26, 58, 49])
+2019-03-21 14:09:20,934 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:09:20,937 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 32, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 28, 60, 53])
+2019-03-21 14:09:24,442 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:09:24,444 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 33, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 28, 61, 55])
+2019-03-21 14:09:27,949 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:09:27,951 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 33, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 28, 61, 55])
+2019-03-21 14:09:31,456 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:09:31,458 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 33, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 27, 60, 53])
+2019-03-21 14:09:34,963 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:09:34,965 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 33, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 27, 60, 53])
+2019-03-21 14:09:38,471 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:09:38,473 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 33, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 29, 62, 57])
+2019-03-21 14:09:41,978 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:09:41,980 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 33, 0, 0, 0, 0, 0, 14, 0, 0, 0, 0, 0, 0, 0, 0, 29, 76, 85])
+2019-03-21 14:09:45,485 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:09:45,487 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 33, 0, 0, 0, 0, 0, 14, 0, 0, 0, 0, 0, 0, 0, 0, 29, 76, 85])
+2019-03-21 14:09:48,992 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:09:48,994 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 32, 0, 0, 0, 0, 0, 14, 0, 0, 0, 0, 0, 0, 0, 0, 27, 73, 79])
+2019-03-21 14:09:52,499 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:09:52,502 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 32, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 27, 59, 51])
+2019-03-21 14:09:56,007 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:09:56,009 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 33, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 28, 61, 55])
+2019-03-21 14:09:59,514 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:09:59,517 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 33, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 28, 61, 55])
+2019-03-21 14:10:03,022 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:10:03,024 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 33, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 29, 62, 57])
+2019-03-21 14:10:06,529 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:10:06,531 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 34, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 29, 63, 59])
+2019-03-21 14:10:10,036 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:10:10,039 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 34, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 29, 63, 59])
+2019-03-21 14:10:13,544 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:10:13,546 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 34, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 28, 62, 57])
+2019-03-21 14:10:17,051 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:10:17,053 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 34, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 28, 62, 57])
+2019-03-21 14:10:20,558 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:10:20,560 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 34, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 27, 61, 55])
+2019-03-21 14:10:24,065 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:10:24,067 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 34, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 27, 61, 55])
+2019-03-21 14:10:27,572 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:10:27,575 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 34, 0, 0, 0, 0, 0, 14, 0, 0, 0, 0, 0, 0, 0, 0, 27, 75, 83])
+2019-03-21 14:10:31,080 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:10:31,082 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 30, 0, 0, 0, 0, 0, 14, 0, 0, 0, 0, 0, 0, 0, 0, 25, 69, 71])
+2019-03-21 14:10:34,587 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:10:34,589 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 30, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 25, 59, 51])
+2019-03-21 14:10:38,094 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:10:38,097 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 30, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 25, 59, 51])
+2019-03-21 14:10:41,602 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:10:41,604 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 32, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 25, 61, 55])
+2019-03-21 14:10:45,109 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:10:45,111 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 32, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 25, 57, 47])
+2019-03-21 14:10:48,616 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:10:48,619 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 33, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 31, 64, 61])
+2019-03-21 14:10:52,124 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:10:52,126 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 33, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 31, 64, 61])
+2019-03-21 14:10:55,631 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:10:55,634 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 33, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 27, 60, 53])
+2019-03-21 14:10:59,139 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:10:59,141 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 34, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 27, 61, 55])
+2019-03-21 14:11:02,646 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:11:02,648 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 34, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 27, 61, 55])
+2019-03-21 14:11:06,153 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:11:06,156 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 31, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 27, 58, 49])
+2019-03-21 14:11:09,661 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:11:09,663 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 31, 0, 0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 27, 61, 55])
+2019-03-21 14:11:13,168 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:11:13,170 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 31, 0, 0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 22, 56, 45])
+2019-03-21 14:11:16,675 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:11:16,677 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 33, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 22, 55, 43])
+2019-03-21 14:11:20,182 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:11:20,184 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 33, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 22, 55, 43])
+2019-03-21 14:11:23,690 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:11:23,692 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 32, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 30, 62, 57])
+2019-03-21 14:11:27,197 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:11:27,199 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 32, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 30, 62, 57])
+2019-03-21 14:11:30,704 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:11:30,706 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 32, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 29, 61, 55])
+2019-03-21 14:11:34,211 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:11:34,213 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 32, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 29, 63, 59])
+2019-03-21 14:11:37,718 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:11:37,720 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 32, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 29, 63, 59])
+2019-03-21 14:11:41,225 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:11:41,227 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 32, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 27, 61, 55])
+2019-03-21 14:11:44,732 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:11:44,734 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 32, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 27, 59, 51])
+2019-03-21 14:11:48,239 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:11:48,241 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 32, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 29, 61, 55])
+2019-03-21 14:11:51,746 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:11:51,749 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 34, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 29, 63, 59])
+2019-03-21 14:11:55,254 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:11:55,256 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 34, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 29, 63, 59])
+2019-03-21 14:11:58,761 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:11:58,763 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 33, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 28, 61, 55])
+2019-03-21 14:12:02,268 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:12:02,270 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 33, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 28, 61, 55])
+2019-03-21 14:12:05,776 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:12:05,778 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 32, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 28, 60, 53])
+2019-03-21 14:12:09,283 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:12:09,285 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 32, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 28, 60, 53])
+2019-03-21 14:12:12,790 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:12:12,792 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 32, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 28, 62, 57])
+2019-03-21 14:12:16,298 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:12:16,300 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 36, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 27, 65, 63])
+2019-03-21 14:12:19,805 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:12:19,807 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 36, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 27, 63, 59])
+2019-03-21 14:12:23,313 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:12:23,315 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 33, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 23, 56, 45])
+2019-03-21 14:12:26,820 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:12:26,822 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 33, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 23, 56, 45])
+2019-03-21 14:12:30,327 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:12:30,329 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 33, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 27, 60, 53])
+2019-03-21 14:12:33,835 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:12:33,837 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 33, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 27, 60, 53])
+2019-03-21 14:12:37,341 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:12:37,344 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 33, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 27, 60, 53])
+2019-03-21 14:12:40,849 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:12:40,851 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 35, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 29, 64, 61])
+2019-03-21 14:12:44,356 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:12:44,358 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 35, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 29, 64, 61])
+2019-03-21 14:12:47,863 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:12:47,865 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 35, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 31, 66, 65])
+2019-03-21 14:12:51,370 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:12:51,372 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 32, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 31, 63, 59])
+2019-03-21 14:12:54,877 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:12:54,880 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 32, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 31, 63, 59])
+2019-03-21 14:12:58,385 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:12:58,387 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 32, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 30, 62, 57])
+2019-03-21 14:13:01,892 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:13:01,894 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 32, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 30, 62, 57])
+2019-03-21 14:13:05,400 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:13:05,402 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 32, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 29, 61, 55])
+2019-03-21 14:13:08,907 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:13:08,909 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 33, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 29, 62, 57])
+2019-03-21 14:13:12,414 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:13:12,416 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 33, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 29, 62, 57])
+2019-03-21 14:13:15,921 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:13:15,923 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 33, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 28, 61, 55])
+2019-03-21 14:13:19,428 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:13:19,430 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 33, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 28, 61, 55])
+2019-03-21 14:13:22,935 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:13:22,937 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 33, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 27, 60, 53])
+2019-03-21 14:13:26,442 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:13:26,444 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 33, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 27, 60, 53])
+2019-03-21 14:13:29,949 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:13:29,952 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 33, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 27, 60, 53])
+2019-03-21 14:13:33,457 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:13:33,459 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 33, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 26, 59, 51])
+2019-03-21 14:13:36,964 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:13:36,966 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 33, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 26, 59, 51])
+2019-03-21 14:13:40,471 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:13:40,473 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 33, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 28, 61, 55])
+2019-03-21 14:13:43,978 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:13:43,980 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 32, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 28, 60, 53])
+2019-03-21 14:13:47,485 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:13:47,488 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 32, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 28, 60, 53])
+2019-03-21 14:13:50,992 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:13:50,995 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 32, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 25, 57, 47])
+2019-03-21 14:13:54,499 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:13:54,502 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 32, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 25, 57, 47])
+2019-03-21 14:13:58,006 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:13:58,009 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 32, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 20, 52, 37])
+2019-03-21 14:14:01,514 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:14:01,516 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 34, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 20, 54, 41])
+2019-03-21 14:14:05,022 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:14:05,024 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 34, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 20, 54, 41])
+2019-03-21 14:14:08,529 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:14:08,531 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 33, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 31, 64, 61])
+2019-03-21 14:14:12,036 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:14:12,038 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 33, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 31, 66, 65])
+2019-03-21 14:14:15,543 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:14:15,546 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 33, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 28, 63, 59])
+2019-03-21 14:14:19,051 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:14:19,053 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 34, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 28, 62, 57])
+2019-03-21 14:14:22,558 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:14:22,560 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 34, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 28, 62, 57])
+2019-03-21 14:14:26,065 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:14:26,067 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 34, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 27, 61, 55])
+2019-03-21 14:14:29,572 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:14:29,574 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 34, 0, 0, 0, 0, 0, 3, 0, 0, 3, 0, 0, 0, 0, 0, 27, 67, 67])
+2019-03-21 14:14:33,079 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:14:33,082 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 32, 0, 0, 0, 0, 0, 3, 0, 0, 3, 0, 0, 0, 0, 0, 20, 58, 49])
+2019-03-21 14:14:36,586 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:14:36,589 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 32, 0, 0, 0, 0, 0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 20, 55, 43])
+2019-03-21 14:14:40,094 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:14:40,096 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 32, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 20, 52, 37])
+2019-03-21 14:14:43,601 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:14:43,603 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 33, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 29, 62, 57])
+2019-03-21 14:14:47,108 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:14:47,110 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 33, 0, 0, 0, 0, 0, 18, 0, 0, 0, 0, 0, 0, 0, 0, 29, 80, 93])
+2019-03-21 14:14:50,615 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:14:50,618 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 30, 0, 0, 0, 0, 0, 18, 0, 0, 0, 0, 0, 0, 0, 0, 26, 74, 81])
+2019-03-21 14:14:54,123 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:14:54,125 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 30, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 26, 56, 45])
+2019-03-21 14:14:57,630 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:14:57,632 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 30, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 30, 60, 53])
+2019-03-21 14:15:01,137 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:15:01,140 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 32, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 30, 62, 57])
+2019-03-21 14:15:04,645 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:15:04,647 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 32, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 30, 62, 57])
+2019-03-21 14:15:08,152 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:15:08,154 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 34, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 26, 60, 53])
+2019-03-21 14:15:11,659 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:15:11,661 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 34, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 26, 60, 53])
+2019-03-21 14:15:15,166 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:15:15,169 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 34, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 29, 63, 59])
+2019-03-21 14:15:18,673 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:15:18,676 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 33, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 29, 62, 57])
+2019-03-21 14:15:22,181 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:15:22,183 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 33, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 29, 62, 57])
+2019-03-21 14:15:25,688 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:15:25,690 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 33, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 27, 60, 53])
+2019-03-21 14:15:29,195 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:15:29,197 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 33, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 27, 60, 53])
+2019-03-21 14:15:32,702 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:15:32,705 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 33, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 28, 61, 55])
+2019-03-21 14:15:36,210 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:15:36,212 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 32, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 28, 60, 53])
+2019-03-21 14:15:39,717 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:15:39,719 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 32, 0, 0, 0, 0, 0, 5, 0, 0, 0, 0, 0, 0, 0, 0, 28, 65, 63])
+2019-03-21 14:15:43,224 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:15:43,226 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 30, 0, 0, 0, 0, 0, 5, 0, 0, 0, 0, 0, 0, 0, 0, 30, 65, 63])
+2019-03-21 14:15:46,730 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:15:46,732 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 30, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 30, 60, 53])
+2019-03-21 14:15:50,237 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:15:50,239 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 32, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 28, 60, 53])
+2019-03-21 14:15:53,744 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:15:53,746 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 32, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 28, 60, 53])
+2019-03-21 14:15:57,251 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:15:57,253 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 32, 0, 0, 0, 0, 0, 3, 0, 0, 2, 0, 0, 0, 0, 0, 28, 65, 63])
+2019-03-21 14:16:00,758 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:16:00,761 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 34, 0, 0, 0, 0, 0, 3, 0, 0, 2, 0, 0, 0, 0, 0, 24, 63, 59])
+2019-03-21 14:16:04,266 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:16:04,268 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 34, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 24, 58, 49])
+2019-03-21 14:16:07,773 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:16:07,776 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 34, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 27, 61, 55])
+2019-03-21 14:16:11,281 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:16:11,283 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 36, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 27, 63, 59])
+2019-03-21 14:16:14,788 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:16:14,790 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 36, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 27, 63, 59])
+2019-03-21 14:16:18,295 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:16:18,297 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 32, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 27, 59, 51])
+2019-03-21 14:16:21,802 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:16:21,804 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 32, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 27, 59, 51])
+2019-03-21 14:16:25,309 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:16:25,311 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 32, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 34, 66, 65])
+2019-03-21 14:16:28,816 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:16:28,818 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 32, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 34, 66, 65])
+2019-03-21 14:16:32,323 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:16:32,325 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 32, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 34, 66, 65])
+2019-03-21 14:16:35,830 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:16:35,832 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 32, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 30, 62, 57])
+2019-03-21 14:16:39,337 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:16:39,339 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 32, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 30, 62, 57])
+2019-03-21 14:16:42,845 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:16:42,847 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 32, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 30, 62, 57])
+2019-03-21 14:16:46,353 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:16:46,355 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 33, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 30, 63, 59])
+2019-03-21 14:16:49,860 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:16:49,862 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 33, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 30, 63, 59])
+2019-03-21 14:16:53,367 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:16:53,369 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 32, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 28, 60, 53])
+2019-03-21 14:16:56,874 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:16:56,876 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 32, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 28, 60, 53])
+2019-03-21 14:17:00,381 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:17:00,383 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 32, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 30, 62, 57])
+2019-03-21 14:17:03,888 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:17:03,890 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 32, 0, 0, 0, 0, 0, 12, 0, 0, 0, 0, 0, 0, 0, 0, 30, 74, 81])
+2019-03-21 14:17:07,395 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:17:07,398 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 32, 0, 0, 0, 0, 0, 12, 0, 0, 0, 0, 0, 0, 0, 0, 30, 74, 81])
+2019-03-21 14:17:10,907 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:17:10,909 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 37, 0, 0, 2, 0, 0, 12, 0, 0, 0, 0, 0, 0, 0, 0, 23, 74, 81])
+2019-03-21 14:17:14,414 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:17:14,416 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 37, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 23, 62, 57])
+2019-03-21 14:17:17,919 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:17:17,921 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 35, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 26, 63, 59])
+2019-03-21 14:17:21,426 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:17:21,428 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 35, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 26, 61, 55])
+2019-03-21 14:17:24,933 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:17:24,935 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 35, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 25, 60, 53])
+2019-03-21 14:17:28,440 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:17:28,442 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 34, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 25, 59, 51])
+2019-03-21 14:17:31,947 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:17:31,949 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 34, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 25, 59, 51])
+2019-03-21 14:17:35,454 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:17:35,456 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 34, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 28, 62, 57])
+2019-03-21 14:17:38,961 - AmpMeter_Rewrite - INFO - Sending command to NCD
+2019-03-21 14:17:38,964 - AmpMeter_Rewrite - INFO - AmpMeter returned(True, [170, 19, 0, 0, 34, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 28, 62, 57])
