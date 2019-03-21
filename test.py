@@ -9,11 +9,26 @@ from mqttwrapper.hbmqtt_backend import run_script
 from decimal import *
 getcontext().prec = 2
 
+# Setup logging
+# create logger with 'spam_application'
+logger = logging.getLogger('AmpMeter_Rewrite')
+logger.setLevel(logging.DEBUG)
+# create file handler which logs even debug messages
+fh = logging.FileHandler('ampmeter.log')
+fh.setLevel(logging.DEBUG)
+# create console handler with a higher log level
+ch = logging.StreamHandler()
+ch.setLevel(logging.DEBUG)
+# create formatter and add it to the handlers
+formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+fh.setFormatter(formatter)
+ch.setFormatter(formatter)
+# add the handlers to the logger
+logger.addHandler(fh)
+logger.addHandler(ch)
 
-
-
-# Set NCD Fusion Controller IP address
-NCD_IP = '192.168.1.101'
+# Set NCD AMP Meter IP address
+NCD_IP = '192.168.1.102'
 # Set Listening Port on Remote Fusuion Controller
 NCD_PORT = 2101
 # Set Buffer Size
@@ -36,241 +51,25 @@ MONGO_PORT = 27017
 # ampMaxMin = motors_config.ampMaxMin
 
 # Setup NCD Fusion Board Socket
+logger.info('Setting up Socket')
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 s = sock
+# set up your socket with the desired settings.
+
 # instantiate the board object and pass it the network socket
-# board = ncd.Relay_Controller(sock)
+board = ncd.Relay_Controller(sock)
+logger.info('Passed socket to NCD')
+# connect the socket using desired IP and Port
+logger.info('Connecting to AmpMeter')
+sock.connect((NCD_IP, NCD_PORT))
+sock.settimeout(5)
+# print board1.test_comms()
+while True:
+    # pass these methods a number between 1 and 512
+    # to set the current status of the relay
+    logger.info('Sending command to NCD')
+    # print(board.lantronix_read_amps())
+    logger.info('AmpMeter returned' + str(board.lantronix_read_amps()))
+    time.sleep(3.5)
 
-# Set NCD Current Monitor IP address
-TCP_IP = '192.168.1.102'
-# Set Listening Port on Remote Current Monitor
-TCP_PORT = 2101
-# Set Buffer Size
-BUFFER_SIZE = 1024
-# Number of Current Monitor Channels
-chanNum = 6
-
-# MQTT Topic
-mqtt_topic = 'amps'
-# MQTT Server IP or HOSTNAME
-mqtt_server = '192.168.1.10'
-# MQTT Port Number, usally 1883
-mqtt_port = 1883
-# How long of a sample window (in seconds)
-sleep_time = 3.2 # 2 seconds
-
-# Mongo Server
-MONGO_IP = '192.168.1.9'
-MONGO_PORT = 27017
-
-# Setup Amp Channel Names
-channels = ["infeed", "soaker", "dryerMain",
-            "dryerOut", "grinder", "classifier"
-            ]
-
-
-def dump(obj):
-    for attr in dir(obj):
-        if hasattr(obj, attr):
-            print("obj.%s = %s" % (attr, getattr(obj, attr)))
-
-
-def send_command(req, encoding):
-    """Send either Decimal or Hex command to NCD Current Monitor.
-
-    Parameters
-    ----------
-    req : string
-        string containging either complete HEX code
-        for command or Decimal Format from NCD API
-    encoding : string
-        string containing either "hex" or "dec"
-
-    Returns
-    -------
-    string
-        returns data from Current Monitor
-
-    """
-    print(req)
-    req = req.decode(encoding)
-    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    # s = socket.socket()
-    s.settimeout(6)
-    try:
-        s.connect((TCP_IP, TCP_PORT))
-        s.send(req)
-        data = s.recv(BUFFER_SIZE)
-    except socket.error as e:
-        # if e.errno != errno.ECONNREFUSE:
-        #     dump(e)
-        #     # Not the error we are looking for, re-raise
-        #     raise e
-        time.sleep(sleep_time)
-        s.connect((TCP_IP, TCP_PORT))
-        s.send(req)
-        data = s.recv(BUFFER_SIZE)
-        # print "socket connection refused"
-        dump(e)
-    # s.connect((TCP_IP, TCP_PORT))
-    # s.send(req)
-    # data = s.recv(BUFFER_SIZE)
-    s.close()
-    return data
-
-
-# Read current and return bytes
-def readCurrent():
-    """Reads NCD Current Monitor Value and
-    breaks data into pairs for calculations.
-
-    Returns
-    -------
-    type
-        Pairs of data for given current channel.
-
-    """
-
-    # Set Command to be sent to Current Monitor
-    # In this case query all 6 channels
-    # https://ncd.io/communicating-to-current-monitoring-controllers/
-    MESSAGE = 'aa0ebc320a54926a010106000004551374'
-    # MESSAGE = 'AA03FE7C0128'.decode('hex')
-
-    try:
-        data = send_command(MESSAGE, 'hex')
-        while len(data) < 1:
-            data = send_command(MESSAGE, 'hex')
-    except socket.timeout as e:
-        time.sleep(sleep_time)
-        data = send_command(MESSAGE, 'hex')
-        print("socket connection died")
-        dump(e)
-    except socket.error as e:
-        dump(e)
-        # if e.errno != errno.ECONNREFUSE:
-        #     # Not the error we are looking for, re-raise
-        #     raise e
-        time.sleep(sleep_time)
-        data = send_command(MESSAGE, 'hex')
-        print("socket connection refused")
-        dump(e)
-
-    # Convert response to hex
-    data = data.encode('hex')
-    # Split into Byte Pairs
-    pairs = re.findall('..?', data)
-    return pairs
-
-
-def calcAmps(dataPairs):
-    count = 1
-    channel = {}
-    most = 2
-    while (count <= chanNum):
-
-        try:
-            mid = most + 1
-            low = mid + 1
-            # Calc channel amp value 3 bytes per channel
-            channel[channels[int(count) - 1]] = str( round( ( round(int(dataPairs[most],16) * 65536,1) + round(int(dataPairs[mid],16) * 265,1) + round(int(dataPairs[low],16),1)) / 1000, 1) )
-            count = count + 1
-            most = most + 3
-        except IndexError:
-            print('index error and going to shit')
-            start_server_monitor()
-
-    return channel
-
-
-def write_mqtt(topic, payload):
-    mqtt_client = ClientMQTT(ip_address=mqtt_server, port=mqtt_port)
-    mqtt_client.publish(topic, payload)
-
-
-def start_server_mqtt():
-    print('Connecting MQTT Client on port ' + mqtt_port)
-    mqtt_client = ClientMQTT(ip_address=mqtt_server, port=mqtt_port)
-    mqtt_client.simulate()
-
-
-def start_server_monitor():
-
-    while True:
-
-        try:
-            # read Current Data
-            data = readCurrent()
-            channelData = calcAmps(data)
-            channelData['time'] = str(datetime.datetime.now())
-            ampData = json.dumps(channelData)
-
-            # write mqtt channel
-            write_mqtt(mqtt_topic, ampData)
-            mongo = MongoClient(MONGO_IP, MONGO_PORT)
-            mongoDB = mongo['washline']
-            washlineStatus = mongoDB.status
-            # statusdata_id = washlineStatus.insert_one(firstStatus).inserted_id
-            currentStatus = washlineStatus.find_one(sort=[('_id', -1)])
-
-
-            if float(channelData['classifier']) > 1 and float(channelData['classifier']) < 50 and currentStatus["running"] == 'yes':
-                ampdata = mongoDB.amps
-                ampdata_id = ampdata.insert_one(channelData).inserted_id
-                print('saved data to mongo')
-
-            time.sleep(sleep_time)
-
-        except IndexError:
-            print('ERROR|Value')
-            # read Current Data
-            data = readCurrent()
-            channelData = calcAmps(data)
-            channelData['time'] = str(datetime.datetime.now())
-            ampData = json.dumps(channelData)
-
-            # publish current data
-            write_mqtt(mqtt_topic, ampData)
-
-            # Save data to MONGODB
-            mongo = MongoClient(MONGO_IP, MONGO_PORT)
-            mongoDB = mongo['washline']
-            ampdata = mongoDB.amps
-            ampdata_id = ampdata.insert_one(channelData).inserted_id
-
-
-            time.sleep(sleep_time)
-
-    return
-
-
-def main():
-    # firstStatus  = {
-    #     "running": 'no',
-    #     "material": "thintote",
-    #     "source": "agriplas",
-    #     "type": "factional",
-    #     "box": 22,
-    #     "currentLbs": 1206,
-    #     "currentLbsH": 990
-    # }
-    # mongo = MongoClient(MONGO_IP, MONGO_PORT)
-    # mongoDB = mongo['washline']
-    # washlineStatus  = mongoDB.status
-    # statusdata_id = washlineStatus.insert_one(firstStatus).inserted_id
-    # currentStatus = washlineStatus.find_one(sort=[( '_id', -1 )])
-    sock.connect((NCD_IP, NCD_PORT))
-    sock.settimeout(5)
-    start_server_monitor()
-    # run_script(callback, broker, topics)
-    sock.close()
-    # st = Thread(target=start_server_monitor, args=())
-    # st.start()
-
-    # Used for just throwing data at the MQTT server from the IOx application
-    # mt = Thread(target=start_server_mqtt, args=())
-    # mt.start()
-
-
-if __name__ == '__main__':
-    main()
+sock.close()

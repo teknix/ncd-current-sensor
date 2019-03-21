@@ -130,6 +130,7 @@ def readCurrent():
 
 
 def calcAmps(dataPairs):
+    print(dataPairs)
     count = 1
     channel = {}
     most = 2
