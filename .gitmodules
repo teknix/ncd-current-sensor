@@ -1,0 +1,3 @@
+[submodule "Industrial-Relay-Control"]
+	path = Industrial-Relay-Control
+	url = https://github.com/teknix/Industrial-Relay-Control.git

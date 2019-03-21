@@ -1,12 +1,44 @@
-#!/usr/bin/python
-from client_mqtt import ClientMQTT
-from threading import Thread
-import time, re, datetime, json, socket
+import os
+import logging
+# import asyncio
+import sys, time, re, datetime, json, socket, errno
 from pymongo import MongoClient
-
-# Set Decimal Precision
+from mqttwrapper.hbmqtt_backend import run_script
+# import ncd_industrial_relay as ncd
 from decimal import *
 getcontext().prec = 2
+
+
+
+
+# Set NCD Fusion Controller IP address
+NCD_IP = '192.168.1.101'
+# Set Listening Port on Remote Fusuion Controller
+NCD_PORT = 2101
+# Set Buffer Size
+
+
+
+# MQTT Server IP or HOSTNAME
+mqtt_server = '192.168.1.10'
+# MQTT Port Number, usally 1883
+mqtt_port = 1883
+broker = "mqtt://" + str(mqtt_server) + ":" + str(mqtt_port)
+topics =["amps", "control"]
+
+# Mongo Server
+MONGO_IP = '192.168.1.9'
+MONGO_PORT = 27017
+
+# Setup Dict for motor High and Low Amps
+# Could be set for MongoDB later
+# ampMaxMin = motors_config.ampMaxMin
+
+# Setup NCD Fusion Board Socket
+sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+s = sock
+# instantiate the board object and pass it the network socket
+# board = ncd.Relay_Controller(sock)
 
 # Set NCD Current Monitor IP address
 TCP_IP = '192.168.1.102'
@@ -59,6 +91,7 @@ def send_command(req, encoding):
         returns data from Current Monitor
 
     """
+    print(req)
     req = req.decode(encoding)
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     # s = socket.socket()
@@ -225,8 +258,13 @@ def main():
     # washlineStatus  = mongoDB.status
     # statusdata_id = washlineStatus.insert_one(firstStatus).inserted_id
     # currentStatus = washlineStatus.find_one(sort=[( '_id', -1 )])
-    st = Thread(target=start_server_monitor, args=())
-    st.start()
+    sock.connect((NCD_IP, NCD_PORT))
+    sock.settimeout(5)
+    start_server_monitor()
+    # run_script(callback, broker, topics)
+    sock.close()
+    # st = Thread(target=start_server_monitor, args=())
+    # st.start()
 
     # Used for just throwing data at the MQTT server from the IOx application
     # mt = Thread(target=start_server_mqtt, args=())
