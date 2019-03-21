@@ -3,6 +3,7 @@ import logging
 # import asyncio
 import sys, time, re, datetime, json, socket, errno
 from pymongo import MongoClient
+import Industrial_Relay_Control.ncd_industrial_relay as ncd
 from mqttwrapper.hbmqtt_backend import run_script
 # import ncd_industrial_relay as ncd
 from decimal import *
